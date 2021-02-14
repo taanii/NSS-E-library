@@ -1,13 +1,13 @@
 <?php
 
-require './connect.php';
+require '../../connect.php';
 
 if(isset($_POST['submit'])){
 
     $file=$_FILES['file'];
     // $filename=$file['name'];
     $filename=mysqli_real_escape_string($connection,$_POST['bookname']).".pdf";
-    $path="files/books/".$filename;
+    $path="../../files/books/".$filename;
 
     $category=mysqli_real_escape_string($connection,$_POST['category']);
     $type=mysqli_real_escape_string($connection,$_POST['type']);
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="./css/addBook.css">
+        <link rel="stylesheet" type="text/css" href="../../css/addBook.css">
         <style>
             label{
                 font-size: 1.3rem;
