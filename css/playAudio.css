@@ -1,0 +1,58 @@
+body{
+    background-image: url('../img/audioPlayer-bg.jpg');
+}
+input[type=range]{
+    width: 80%;
+}
+.container{
+    background-color: #522915;
+    position: fixed;
+}
+#container1{
+    left: 0;
+    top: 0;
+    height: 15%;
+    width: 100%;
+    text-align: center;
+}
+#container2{
+    left: 0;
+    top:70%;
+    height: 30%;
+    width: 100%;
+    text-align: center;
+}
+#ctrl-btn{
+    background-color: #522915;
+    width: 6.8%;
+    height: %;
+    border: 0;
+    border-radius: 47%;
+    padding: 0;
+    text-align: center;
+    margin: 4%;
+}
+.fa-play-circle, .fa-pause-circle{;
+    font-size: 340%;
+    text-align: center;
+    padding: 0px;
+}
+
+@media(max-width: 340px){
+    input[type=range]{
+        width: 60%;
+    }
+}
+@media(min-width: 700px) and (min-height: 900px){
+    #container2{
+        top: 75%;
+        height: 25%;
+    }
+    #ctrl-btn{
+        width: 10%;
+        height: 10%;
+    }
+    .fa-pause-circle, .fa-play-circle{
+        font-size: 440%;
+    }
+} 

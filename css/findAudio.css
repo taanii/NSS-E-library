@@ -1,0 +1,58 @@
+.container, .jumbotron{
+    background-color: rgba(245, 230, 231, 0.3);
+    /* font-size: 1.5 rem; */
+}
+label{
+    font-size: 2rem;
+}
+
+body{
+    background-image: url('../img/book.jpg');
+    background-size: cover;
+    /* background-position-y: 20%; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* overflow-x: hidden; */
+    /* font-size: 1.5rem; */
+    position: relative;
+    overflow-y: scroll;
+}
+.maxHeight {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+
+/*  */
+label {
+    font-size: 1.3rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#tryit{
+    width: 10%;
+}
+
+img{
+    width:50% ;
+    margin:5% 25%;
+    border:5px;
+}
+h5{
+    text-align:center;
+    
+}
+.card-title{
+    width:100%;
+
+}
+.container-fluid{
+    width:  80%;
+}
+.card{
+    margin:15px ;
+    background-color:#F8F4F1;
+}
