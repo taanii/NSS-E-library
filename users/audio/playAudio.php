@@ -2,7 +2,7 @@
 
 $fname = $_GET['name'];
 
-$filepath = "files" . DIRECTORY_SEPARATOR . "audios" . DIRECTORY_SEPARATOR . $fname;	// audio filepath
+$filepath = "../../files" . DIRECTORY_SEPARATOR . "audios" . DIRECTORY_SEPARATOR . $fname;	// audio filepath
 //readfile($filepath);
 //header('Content-type: application/mpeg');
 //header('Content-length: '.filesize($filepath));
