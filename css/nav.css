@@ -16,9 +16,9 @@ nav {
 }
 /* #logo_n_brandname{
     margin-left: 5px;
-}*/
+} */
 #logo{
-    height: 30%;
-    width: 30%;
-    /* margin-right: 15px; */
+    height: 4rem;
+    width: 4rem;
+    margin-right: 15px;
 } 

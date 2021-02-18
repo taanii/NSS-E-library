@@ -72,16 +72,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active mar">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item dropdown active mar">
+            <li class="nav-item dropdown mar">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Library Section
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Audio Stories</a></li>
+                    <li><a class="dropdown-item" href="../audio/audiosection.php">Audio Stories</a></li>
+                    <li><a class="dropdown-item" href="../books/bookSection.php">Books</a></li>
 
                     <li class="nav-link dropdown">
                         <a href="#" class="dropdown-item dropdown-toggle" data-toggle="dropdown">
@@ -98,7 +99,10 @@
                     <li><a class="dropdown-item" href="#">Poems</a></li>
                 </ul>
             </li>
-            <li class="nav-item active  mar">
+            <li class="nav-item  mar">
+                <a class="nav-link" href="../../admin/landing_page/login.php">Log In</a>
+            </li>
+            <li class="nav-item  mar">
                 <a class="nav-link" href="#">About us</a>
             </li>
             </li>
@@ -134,7 +138,7 @@
 				<img src="../../img/story_books.jpg" >
 			</div>
 			<div class="col-lg-3">
-				<a class="red-link"href="home.html">Story Books</a><br><br>
+				<a class="red-link"href="#">Story Books</a><br><br>
 				<i>There is no friend as loyal as a book.</i><br><br>
 				<p>Access various fascinating story books which teaches you many valuable lessons and 
 				helps you to develop your imagination.</p>
@@ -143,7 +147,7 @@
 				<img src="../../img/short_stories.jpg">
 			</div>
 			<div class="col-lg-3">
-				<a class="red-link"href="home.html">Short Stories</a><br><br>
+				<a class="red-link"href="#">Short Stories</a><br><br>
 				<i>Let's add up the short learning in a better way!</i><br><br>
 				<p>We have brought you all the tales in your preferred language. We provide comedy, action, 
 				detective and and moral stories here.</p>
@@ -154,7 +158,7 @@
 				<img src="../../img/picture_books.jpg">
 			</div>
 			<div class="col-lg-3">
-				<a class="red-link"href="home.html">Picture Books</a><br><br>
+				<a class="red-link"href="#">Picture Books</a><br><br>
 				<i>Books are a uniquely portable magic.</i><br><br>
 				<p>Pictures do say a lot than some mere words. Get access to some amazing picture books for 
 				young readers and help inspire visual thinking.</p>
@@ -163,7 +167,7 @@
 				<img src="../../img/audio_books.jpg">
 			</div>
 			<div class="col-lg-3">
-				<a class="red-link"href="home.html">Audio Books</a><br><br>
+				<a class="red-link"href="../audio/audiosection.php">Audio Books</a><br><br>
 				<i>Find a listen for every moment.</i><br><br>
 				<p>Why not experience the same stories and poems in a different way? 'Audio Section' is the 
 				answer. Get access to audio books of stories and poems in Marathi anytime! </p>
