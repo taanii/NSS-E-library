@@ -1,0 +1,20 @@
+i{
+	padding: 10%;
+}
+img{
+	display: inline;
+	height: 100%;
+	padding: 5%;
+	width: 105%;
+}
+p{
+	padding: 3%;
+	text-align: center;
+}
+.red-link{
+	color: red;
+	font-size: 150%;
+	padding: 5%;
+}
+.btn-group-justified
+{}

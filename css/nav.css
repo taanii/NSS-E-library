@@ -1,0 +1,24 @@
+nav {
+    height: 60px;
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+/* body {
+    background-image: url('../../img/bg_homepage.jpg');
+} */
+
+.mar {
+    margin: 0px 25px;
+}
+/* #logo_n_brandname{
+    margin-left: 5px;
+}*/
+#logo{
+    height: 30%;
+    width: 30%;
+    /* margin-right: 15px; */
+} 
