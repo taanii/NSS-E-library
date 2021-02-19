@@ -5,7 +5,7 @@ define('DB_NAME','elibraryDB');
 define('DB_USERNAME','root');
 define('DB_PASSWORD','root');
 
-$connection=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME) or die(mysqli_connect_error());
+$connection = mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME) or die(mysqli_connect_error());
 
 
 ?>

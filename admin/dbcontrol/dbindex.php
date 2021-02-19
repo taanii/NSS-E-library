@@ -76,13 +76,31 @@
     <div class="row">
         <div class="col-3 sm-col-12 xs-col-12">
           <div class="nav flex-column nav-pills"  aria-orientation="vertical">
-            <a class="nav-link"  href="dbbook.html"  aria-selected="false">Books</a>
-            <a class="nav-link"  href="dbaud.html" aria-selected="false">Audio</a>
-            <a class="nav-link active" href="#"  aria-selected="true">Poems</a>
+               <!--fetch database table names from the database to the <A> tag-->
+            <a class="nav-link active"  href="#" aria-selected="true">Audio</a>
+            <a class="nav-link"  href="#" aria-selected="true">Audio</a>
+            <a class="nav-link"  href="#" aria-selected="true">Audio</a>
+            <a class="nav-link"  href="#" aria-selected="true">Audio</a>
+            <a class="nav-link"  href="#" aria-selected="true">Audio</a>
+
           </div>
         </div>
         <div class="col-9  sm-col-12 xs-col-12">
-          
+        <!--fetch database table from the database to this div-->
+        <table class="table-responsive">
+            <?php
+                while($row=mysql_fetch_assoc($result)) {
+                    ?>
+                    <tr>
+                        <td><?php echo $rows.['id']; ?></td>
+                        <td><?php echo $rows.['id']; ?></td>
+                        <td><?php echo $rows.['id']; ?></td>
+                    </tr>
+             <?php   }
+?>
+
+        </table>
+
         </div>
       </div>
 </section>
