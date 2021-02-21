@@ -53,7 +53,6 @@
     <link rel="stylesheet" href="../../css/nav.css" /><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Admin crud</title>
-
 </head>
 
 
@@ -114,8 +113,8 @@
     </div>
 
 <section style="margin: 60px;">
-    <div class="row">
-        <div class="col-3 sm-col-12 xs-col-12">
+    <div class="bg-w row">
+        <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12">
           <div class="nav flex-column nav-pills"  aria-orientation="vertical">
                 <?php
                     $curr_table = NULL; 
@@ -129,17 +128,18 @@
                 ?>
                         <form method="POST" action="#">
                             <input type="hidden" name="table-name" value="<?php echo $t_name['TABLE_NAME'] ?>" >
-                            <input type="submit" class="nav-link" aria-selected="true"  value="<?php echo $t_name['TABLE_NAME'] ?>" >
+                            <input style="background-color:white;" type="submit" class="nav-link" aria-selected="true"  value="<?php echo $t_name['TABLE_NAME'] ?>" >
                         </form>
                 <?php
                     }                                                                   // end of while loop for table name
                 ?>
-            <a class="nav-link"  href="dbbook.html"  aria-selected="false">Books</a>
+            <!--<a class="nav-link"  href="dbbook.html"  aria-selected="false">Books</a>
             <a class="nav-link active"  href="#" >Audio</a>
-            <a class="nav-link"  href="dbpoem.html"  aria-selected="false">Poems</a>
+            <a class="nav-link"  href="dbpoem.html"  aria-selected="false">Poems</a>-->
           </div>
         </div>
-        <div class="col-9  sm-col-12 xs-col-12">
+        <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="tbl table-responsive">
             <table>
                 <?php
                     $table_col_q = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS 
@@ -171,16 +171,67 @@
                         echo '<form method="post" action="#">
                                 <input type="hidden" name="table-name" value="'.$curr_table.'">
                                 <input type="hidden" name="row-id" value="'.$table_row[0].'" >
-                                <td><input type="submit" name="row-action" value="Update" ></td>
-                                <td><input type="submit" name="row-action" value="Delete" ></td>';
+                                <td><button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#update" name="row-action" value="Update" >Update</td>
+                                <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete" name="row-action" value="Delete" >Delete</td>';
                         echo '</tr>';
                     }
                 ?>
             </table>
+            </div>
         </div>
       </div>
 </section>
 
+<!--Update modal-->
+<div class="modal fade" id="update" tabindex="-1" aria-labelledby="updatedata" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update file</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Name of the file:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Choose file:</label><br>
+            <input type="file" id="myfile" name="myfile">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--delete Modal -->
+<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="deletefile" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete file</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Confirm delete?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
@@ -193,6 +244,12 @@
         <script>
           $('navbar').bootnavbar();
       </script>
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+         })
+         </script>
 </body>
 
 </html>
